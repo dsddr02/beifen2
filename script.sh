@@ -10,9 +10,9 @@
 #rm -rf theme-temp
 #sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
 #rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd*,miniupnpd-iptables,wireless-regdb}
-# Add luci-theme-opentomcat
-#default_theme='Argon'
-#sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/config/luci
+#Add luci-theme-opentomcat
+default_theme='Argon'
+sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/config/luci
 
 # sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/config/luci
 sed -i 's/192.168.1.1/192.168.1.80/g' package/base-files/files/bin/config_generate
@@ -57,7 +57,7 @@ rm -rf package/small-package/luci-app-nginx-pingos
 rm -rf package/small-package/luci-app-ssr-plus
 rm -rf package/small-package/luci-app-onliner
 rm -rf package/small-package/natflow
-# rm -rf package/small-package/luci-lib-taskd
+rm -rf package/small-package/cdnspeedtest
 
 rm -rf package/feeds/packages/aliyundrive-webdav
 rm -rf feeds/packages/multimedia/aliyundrive-webdav
